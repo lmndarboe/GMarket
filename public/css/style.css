@@ -1,3 +1,21 @@
+.three-d{
+font-family: Garamond, serif;
+line-height: 1em;
+color: #819e86;
+font-weight:bold;
+font-style:italic;
+font-size: 33px;
+text-shadow:0px 0px 0 rgb(105,134,110),1px 0px 0 rgb(90,119,95),2px 0px 0 rgb(76,105,81),3px 0px 0 rgb(61,90,66),4px 0px 0 rgb(47,76,52),5px 0px 0 rgb(32,61,37), 6px 0px 0 rgb(18,47,23),7px 0px 6px rgba(0,0,0,0.95),7px 0px 1px rgba(0,0,0,0.5),0px 0px 6px rgba(0,0,0,.2);}
+
+.three-d2{
+font-family: Arial, sans-serif;
+line-height: 1em;
+color: #067dcc;
+font-weight:bold;
+font-style:italic;
+font-size: 33px;
+text-shadow:0px 0px 0 rgb(-18,101,180),-1px 0px 0 rgb(-33,86,165),-2px 0px 0 rgb(-47,72,151),-3px 0px 0 rgb(-62,57,136),-4px 0px 0 rgb(-76,43,122),-5px 0px 0 rgb(-91,28,107), -6px 0px 0 rgb(-105,14,93),-7px 0px 6px rgba(0,0,0,0.35),-7px 0px 1px rgba(0,0,0,0.5),0px 0px 6px rgba(0,0,0,.2);
+}
 body {
  	padding-top: 6em; 
  	background: none repeat scroll 0 0 #E7EDEF;

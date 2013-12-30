@@ -14,7 +14,7 @@
 
 <div id="header">
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<a class="navbar-brand" href="#">G-Market</a>
+	<a class="navbar-brand three-d" href="#">G-Market</a>
 	<p class="navbar-text navbar-right"><a href="#" class="btn btn-success">Log In</a>&nbsp;  <a href="#" class="btn btn-warning">Sign Up</a></p>
 
   <ul class="nav navbar-nav">
