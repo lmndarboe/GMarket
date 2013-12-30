@@ -41,15 +41,25 @@
 </div>
 
 <div class="row">
-		<div class="col-md-3 well ">
-			<div class="page-header">
-				<h3>All Categories</h3>
-			</div>
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<div class="panel panel-default col-md-3">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">All Categories</h3>
+		  </div>
+		  <div class="panel-body">
+		    Categories Here
+		    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		  </div>
 		</div>
-		<div class="col-md-9 well">
-			<h1>All Ads</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<div class="panel panel-default col-md-9">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">All Ads</h3>
+		  </div>
+		  <div class="panel-body">
+		    Ads Here
+		    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		  </div>
 		</div>
+		
 </div>
 
 
