@@ -43,12 +43,12 @@
 <div class="row">
 		<div class="col-md-3 well ">
 			<div class="page-header">
-				<h3>Left NavigationPane</h3>
+				<h3>All Categories</h3>
 			</div>
-			<br><br><br><br><br><br>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		</div>
 		<div class="col-md-9 well">
-			<h1>Main Content Pane</h1><br><br><br><br><br><br>
+			<h1>All Ads</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		</div>
 </div>
 
