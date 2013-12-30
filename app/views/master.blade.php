@@ -38,7 +38,7 @@
 
 
 <div id="footer">
-<p class="text-muted credit text-center">Gamlabs Inc.&reg;</p>
+<p class="text-muted credit text-center"> Copyright © Gamlabs Technologies.</p>
 
 
 </div>
