@@ -1,16 +1,16 @@
 @extends('master')
 
 @section('mainContent')
-<div class="container">
+
 <div class="row">
 		
-		<div class="col-md-12 ">
+		<section id="main-search-bar" class="col-md-12">
 			<div class="container-fluid">
 			<div class="row">
 				<div class="navbar navbar-inverse" role="navigation">
 					<div class="navbar-header">
 				      
-				        <a class="navbar-brand" rel="home" href="#" title="Buy Sell Rent Everyting">Search by Category</a>
+				        <span class="navbar-brand" >Search by Category</span>
 				    </div>
 				  
 				    <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -22,7 +22,10 @@
 							            <div class="input-group-btn">
 						            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
 						            &nbsp;<select class="form-control">
-				    						<option>All Categories</option>
+				    						<option value="0">All Categories</option>
+				    						@foreach($categories as $category)
+		  										<option value="{{ $category->id}}" >{{ $category->name}}</option>
+		 									 @endforeach
 				    					</select>
 						            </div>
 						        </div>
@@ -37,20 +40,35 @@
 			</div>	
 		</div>
 
-		</div>
+		</section>
 </div>
 
 <div class="row">
-		<div class="panel panel-default col-md-3">
+		<section id="sidebar" class="col-md-3">
+		<div class="panel panel-default ">
 		  <div class="panel-heading">
 		    <h3 class="panel-title">All Categories</h3>
 		  </div>
 		  <div class="panel-body">
-		    Categories Here
-		    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		  <ul class=" list-unstyled">
+		  @foreach($categories as $category)
+		  	<li class=""><a class="btn" href="#">{{ $category->name}}</a> <span class="badge">{{ $category->count}}</span></li>
+		  @endforeach
+		   </ul>
+		   <!--
+		    <ul class="list-group list-unstyled">
+		    	<li class="list-group-item active">Properties  <span class="badge">9000</span></li>
+		    	<li class="list-group-item">Electronics</li>
+		    	<li class="list-group-item">Cars & Vehicles</li>
+
+		    </ul>
+		    -->
+		    
 		  </div>
-		</div>
-		<div class="panel panel-default col-md-9">
+		  </div>
+		</section>
+		<section id="main" class="col-md-9">
+		<div class="panel panel-default ">
 		  <div class="panel-heading">
 		    <h3 class="panel-title">All Ads</h3>
 		  </div>
@@ -58,11 +76,12 @@
 		    Ads Here
 		    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		  </div>
-		</div>
+		  </div>
+		</section>
 		
 </div>
 
 
-</div>
+
 
 @stop

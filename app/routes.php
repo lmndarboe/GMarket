@@ -13,5 +13,8 @@
 
 Route::get('/', function()
 {
-	return View::make('main');
+	//Category::where('parent','=',0)->get()
+	$categories = DB::table(DB::raw('categories as p'))->select(DB::raw('id,name ,(select count(*) from categories where parent = p.id) as count'))->get();
+
+	return View::make('main')->with('categories',$categories);
 });

@@ -20,7 +20,9 @@ body {
  	padding-top: 6em; 
  	background: none repeat scroll 0 0 #E7EDEF;
  }
-
+body {
+	background: url("/images/background.png") repeat scroll 0 0 #E9E9E9;
+}
 .col-centered{
     float: none;
     margin: 0 auto;
