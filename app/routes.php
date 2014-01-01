@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('/login',function(){
+	return View::make('login');
+});
 Route::get('/', function()
 {
 	//Category::where('parent','=',0)->get()

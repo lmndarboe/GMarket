@@ -50,7 +50,7 @@
 		    <h3 class="panel-title">All Categories</h3>
 		  </div>
 		  <div class="panel-body">
-		  <ul class=" list-unstyled">
+		  <ul class="list-unstyled">
 		  @foreach($categories as $category)
 		  	<li class=""><a class="btn" href="#">{{ $category->name}}</a> <span class="badge">{{ $category->count}}</span></li>
 		  @endforeach
