@@ -1,5 +1,5 @@
 @extends('master')
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-4 col-md-offset-4">
 <div class="panel panel-default ">
       <div class="panel-heading">
         <h3 class="panel-title">Login Page</h3>
@@ -16,7 +16,7 @@
 <!-- Tab panes -->
 <div class="tab-content ">
   <div class="tab-pane active" id="login">
-  <br>
+  <br> <br>
     <form class="form-horizontal center">
 <fieldset>
 
@@ -26,11 +26,11 @@
 
 <!-- Prepended text-->
 <div class="form-group">
-  <label class="col-md-2 control-label" for="prependedtext"></label>
-  <div class="col-md-6">
+  <label class=" control-label" for="prependedtext"></label>
+  <div class="col-md-12">
     <div class="input-group">
       <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-      <input id="prependedtext" name="prependedtext" class="form-control" placeholder="Username" required="" type="text">
+      <input id="prependedtext" name="prependedtext" class="form-control input-lg" placeholder="Username" required="" type="text">
     </div>
     
   </div>
@@ -38,21 +38,21 @@
 
 <!-- Prepended text-->
 <div class="form-group">
-  <label class="col-md-2 control-label" for="prependedtext"></label>
-  <div class="col-md-6">
+  <label class=" control-label" for="prependedtext"></label>
+  <div class="col-md-12">
     <div class="input-group">
       <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span> </span>
-      <input id="prependedtext" name="prependedtext" class="form-control" placeholder="Password" required="" type="text">
+      <input id="prependedtext" name="prependedtext" class="form-control input-lg" placeholder="Password" required="" type="text">
     </div>
     
   </div>
 </div>
 
 <!-- Button -->
-<div class="form-group">
-  <label class="col-md-2 control-label" for="suubmit"></label>
+<div class="form-group pull-right">
+  <label class="control-label" for="suubmit"></label>
   <div class="col-md-4">
-    <button id="suubmit" name="suubmit" class="btn btn-primary">Login</button>
+    <button id="suubmit" name="suubmit" class="btn btn-primary btn-lg">Login</button>
   </div>
 </div>
 
