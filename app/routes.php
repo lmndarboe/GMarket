@@ -11,13 +11,32 @@
 |
 */
 
+
 Route::get('/login',function(){
+
 	return View::make('login');
 });
+Route::get('/create',function(){
+
+	return View::make('master.create');
+});
+Route::get('/view',function(){
+
+	return View::make('master.view');
+});
+Route::get('/update',function(){
+
+	return View::make('master.update');
+});
+Route::get('/delete',function(){
+
+	return View::make('master.delete');
+});
+
 Route::get('/', function()
 {
-	//Category::where('parent','=',0)->get()
-	$categories = DB::table(DB::raw('categories as p'))->select(DB::raw('id,name ,(select count(*) from categories where parent = p.id) as count'))->get();
+	//$categories = Category::where('parent','=',0)->get();
+	$categories = DB::table(DB::raw('categories as p'))->select(DB::raw('id,name ,(select count(*) from categories where parent = p.id) as count'))->whereParent(0)->get();
 
-	return View::make('main')->with('categories',$categories);
+	return View::make('index')->with('categories',$categories);
 });
