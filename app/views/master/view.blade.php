@@ -4,7 +4,7 @@
 
 @section('mainContent')
 <div class="row">
-<div class="col-md-12 col-md-offset-0">
+<div class="col-md-10 col-md-offset-1">
 <div class="panel panel-default ">
      
       <div class="panel-body">
@@ -28,7 +28,7 @@
 
 
 <div class="row">
-<div class="col-md-12 col-md-offset-0">
+<div class="col-md-10 col-md-offset-1">
 <div class="panel panel-default ">
       <div class="panel-heading">
         <h3 class="panel-title">You might also like...</h3>

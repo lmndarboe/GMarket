@@ -4,6 +4,8 @@
 	<title>.::G-Market..</title>
 	{{HTML::style('bootstrap/css/bootstrap.css')}}
 	{{HTML::style('bootstrap/css/bootstrap-theme.css')}}
+	{{HTML::style('font-awesome/css/font-awesome.css')}}
+
 	{{HTML::style('css/style.css')}}
 
 
