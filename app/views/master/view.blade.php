@@ -16,7 +16,7 @@
 	   <div class="panel-footer">
 			
 			<a href="#" class="btn btn-danger btn-lg "><span class="glyphicon glyphicon-edit"></span> Edit AD</a>
-			<a href="#" class="btn btn-danger btn-lg "><span class="glyphicon glyphicon-remove"></span> Delete AD</a>
+			<a href="#" class="btn btn-danger btn-lg "><span class="fa fa-trash-o fa-fw"></span> Delete AD</a>
 
 
 

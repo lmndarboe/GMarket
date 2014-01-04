@@ -26,7 +26,7 @@
 		   </div>
 		   <div class="panel-footer">
 			
-				<a href="{{ "#" }}" class="btn btn-danger btn-lg "><span class="glyphicon glyphicon-remove"></span> Yes, I'm sure</a>
+				<a href="{{ "#" }}" class="btn btn-danger btn-lg "><span class="fa fa-trash-o fa-fw"></span> Yes, I'm sure</a>
 
 		   </div>
 			

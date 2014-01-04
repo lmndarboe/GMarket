@@ -70,7 +70,13 @@
 		<section id="main" class="col-md-9">
 		<div class="panel panel-default ">
 		  <div class="panel-heading">
-		    <h3 class="panel-title">All Ads</h3>
+		    <h3 class="panel-title">
+				All Ads
+		    <div class="btn-group pull-right">
+			    <a class="btn btn-primary btn-sm" id="list" href="#"><span class="glyphicon glyphicon-th-list"></span>&nbsp;List</a>
+			    <a class="btn btn-default btn-sm disabled" id="grid" href="#"><span class="glyphicon glyphicon-th"></span>&nbsp;Grid</a>
+			</div>
+			</h3>
 		  </div>
 		  <div class="panel-body">
 		    Ads Here
