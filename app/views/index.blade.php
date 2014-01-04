@@ -22,7 +22,7 @@
 							            <div class="input-group-btn">
 						            <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
 						            &nbsp;<select class="form-control">
-				    						<option value="0">All Categories</option>
+				    						<option value="">All Categories</option>
 				    						@foreach($categories as $category)
 		  										<option value="{{ $category->id}}" >{{ $category->name}}</option>
 		 									 @endforeach

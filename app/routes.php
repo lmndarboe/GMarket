@@ -13,13 +13,27 @@
 
 
 Route::get('/login',function(){
-
+	
 	return View::make('login');
 });
 Route::get('/create',function(){
+	$rt = array();
+	$optionGroups = Category::whereNull('parent_id')->get();
+	foreach ($optionGroups as $option) {
+		$rt[$option->id]['self'] = $option->toArray();
+		$opts = Category::whereParentId($option->id)->get();
+		$rt[$option->id]['children'] = array();
+		foreach ($opts as $o) {
+			$rt[$option->id]['children'][] = $o->toArray();
+		}
+	}
+	
+	
 
-	return View::make('master.create');
+	return View::make('master.create')->with('categories',$rt);
 });
+
+
 Route::get('/view',function(){
 
 	return View::make('master.view');
@@ -35,8 +49,38 @@ Route::get('/delete',function(){
 
 Route::get('/', function()
 {
-	//$categories = Category::where('parent','=',0)->get();
-	$categories = DB::table(DB::raw('categories as p'))->select(DB::raw('id,name ,(select count(*) from categories where parent = p.id) as count'))->whereParent(0)->get();
+	$categories = Category::whereNull('parent_id')->get();
+	//$categories = DB::table(DB::raw('categories as p'))->select(DB::raw('id,name ,(select count(*) from categories where parent = p.id) as count'))->whereParent(0)->get();
 
 	return View::make('index')->with('categories',$categories);
+});
+
+
+Route::get('/test',function()
+{
+
+	//return Category::all()->toArray();
+	$rt = array();
+	$optionGroups = Category::whereNull('parent_id')->get();
+	//$rt = $optionGroups;
+
+	foreach ($optionGroups as $option) {
+
+		$rt[$option->id]['self'] = $option->toArray();
+		//$rt += '<optgroup label="'. $option->name.'" >';
+		$opts = Category::whereParentId($option->id)->get();
+		foreach ($opts as $o) {
+			//$rt += '<option value="'.$o->id.'">'.$o->name.'</option>';
+			$rt[$option->id]['children'][] = $o->toArray();
+		}
+		
+
+		//$rt += '<optgroup>';
+		//return $rt;
+
+	}
+	
+	return $rt;
+
+	
 });

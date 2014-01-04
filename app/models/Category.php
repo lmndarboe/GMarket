@@ -5,4 +5,6 @@ class Category extends Eloquent {
 
 	public static $rules = array();
 	public  $table = "categories";
+
+	
 }

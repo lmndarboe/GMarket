@@ -48,7 +48,7 @@
   <div class="col-md-12">
     <div class="input-group">
       <span class="input-group-addon"><span class="fa fa-envelope-o fa-2x"></span></span>
-      <input id="username" name="username" class="form-control input-lg" placeholder="Username" required="" type="text">
+      <input type="text" id="username" name="username" class="form-control input-lg" placeholder="Email" required="" type="text">
     </div>
     
   </div>
@@ -60,7 +60,7 @@
   <div class="col-md-12">
     <div class="input-group">
       <span class="input-group-addon"><span class="fa fa-key fa-2x"></span> </span>
-      <input id="password" name="password" class="form-control input-lg" placeholder="Password" required="" type="text">
+      <input type="password" id="password" name="password" class="form-control input-lg" placeholder="Password" required="" type="text">
 
     </div>
 
@@ -72,7 +72,7 @@
 <div class="form-group pull-right">
   <label class="control-label" for="submit"></label>
   <div class="col-md-4">
-    <button id="suubmit" name="submit" class="btn btn-primary btn-lg">Login</button>
+    <button id="submit" name="submit" class="btn btn-primary btn-lg">Login</button>
   </div>
 </div>
 
