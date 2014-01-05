@@ -1,6 +1,22 @@
 $(document).ready(function(){
+
+	function sendAjax(id){
+
+		$.ajax({
+			type: "POST",
+			url : $('#'+id+' option:selected').attr('data'),
+			dataType: 'json',
+			data: {subCategory:$(this).val()},
+			success: function(data){
+				alert(data);
+			}
+		});
+	}
+
+
 	$('#mainCategory').change(function(){
 		$('#subCategoryDiv').hide();
+		$('#formPartial').html(' ');
 		
 		$('#category_id').val($('#mainCategory').val());
 		$.ajax({
@@ -12,9 +28,18 @@ $(document).ready(function(){
 				if(data[0]){
 					$('#newAddForm').attr('action','');
 					$('#subCategoryDiv').show();
-					$('#subCategory').html('<option value="">---Select Category---</option>')
+					$('#subCategory').html('<option value="">---Select a Subcategory---</option>')
 				}else{
 					$('#newAddForm').attr('action',"/"+($('#mainCategory option:selected').attr('data')));
+					$.ajax({
+						type: "GET",
+						url : $('#mainCategory option:selected').attr('data')+'/create',
+						//dataType: 'json',
+						//data: {subCategory:$(this).val()},
+						success: function(data){
+							$('#formPartial').html(data);
+						}
+					});
 				}
 				
 				$.each(data,function(e){	
@@ -28,6 +53,17 @@ $(document).ready(function(){
 	$('#subCategory').change(function(){
 		$('#category_id').val($('#subCategory').val());
 		$('#newAddForm').attr('action',"/"+($('#subCategory option:selected').attr('data')));
+
+		//$('#category_id').val($('#mainCategory').val());
+		$.ajax({
+			type: "GET",
+			url : $('#subCategory option:selected').attr('data')+'/create',
+			//dataType: 'json',
+			//data: {subCategory:$(this).val()},
+			success: function(data){
+				alert(data);
+			}
+		});
 	});
 
 

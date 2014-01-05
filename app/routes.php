@@ -15,31 +15,18 @@ Route::post('/ajax',function(){
 	$subCat = Category::whereParentId(Input::get('subCategory'))->orderBy('name')->get()->toArray();
 	return Response::json($subCat);
 
-	//return "Data from Ajax";
 });
 
 Route::get('/default-route',function(){
-	//return Input::get('category_id');
 	return Category::find(Input::get('category_id'))->name;
 });
-/*
-Route::post('/ajax2',function(){
-	$parent = Input::get('category');
-	$name = Input::get('name');
-	$cat = new Category;
-	$cat->parent_id = $parent;
-	$cat->name = $name;
-	$cat->save();
 
-	return "Success";
-});
-*/
 
 Route::get('/login',function(){
 	
 	return View::make('login');
 });
-Route::get('/create',function(){
+Route::get('/post-ad',function(){
 	$rt = array();
 	$optionGroups = Category::whereNull('parent_id')->get();
 	foreach ($optionGroups as $option) {
@@ -78,32 +65,7 @@ Route::get('/', function()
 	return View::make('index')->with('categories',$categories);
 });
 
+//Route::resource('mobile_phones','MobilePhonesController');
 
-Route::get('/test',function()
-{
 
-	//return Category::all()->toArray();
-	$rt = array();
-	$optionGroups = Category::whereNull('parent_id')->get();
-	//$rt = $optionGroups;
-
-	foreach ($optionGroups as $option) {
-
-		$rt[$option->id]['self'] = $option->toArray();
-		//$rt += '<optgroup label="'. $option->name.'" >';
-		$opts = Category::whereParentId($option->id)->get();
-		foreach ($opts as $o) {
-			//$rt += '<option value="'.$o->id.'">'.$o->name.'</option>';
-			$rt[$option->id]['children'][] = $o->toArray();
-		}
-		
-
-		//$rt += '<optgroup>';
-		//return $rt;
-
-	}
-	
-	return $rt;
-
-	
-});
+Route::resource('mobile-phones', 'MobilephonesController');
