@@ -11,6 +11,29 @@
 |
 */
 
+Route::post('/ajax',function(){
+	$subCat = Category::whereParentId(Input::get('subCategory'))->orderBy('name')->get()->toArray();
+	return Response::json($subCat);
+
+	//return "Data from Ajax";
+});
+
+Route::get('/default-route',function(){
+	//return Input::get('category_id');
+	return Category::find(Input::get('category_id'))->name;
+});
+/*
+Route::post('/ajax2',function(){
+	$parent = Input::get('category');
+	$name = Input::get('name');
+	$cat = new Category;
+	$cat->parent_id = $parent;
+	$cat->name = $name;
+	$cat->save();
+
+	return "Success";
+});
+*/
 
 Route::get('/login',function(){
 	

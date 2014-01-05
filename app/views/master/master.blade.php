@@ -9,8 +9,7 @@
 	{{HTML::style('css/style.css')}}
 
 
-	{{HTML::script('js/jquery.js')}}
-	{{HTML::script('bootstrap/js/bootstrap.js')}}
+	
 </head>
 <body >
 
@@ -53,4 +52,8 @@
 </div>
 </div>
 </body>
+
+{{HTML::script('js/jquery.js')}}
+{{HTML::script('bootstrap/js/bootstrap.js')}}
+{{HTML::script('js/custom.js')}}
 </html>

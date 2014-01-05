@@ -4,15 +4,70 @@
 
 @section('mainContent')
 
-<div class="col-md-12 col-md-offset-0">
+<div class="col-md-12">
 <div class="panel panel-default ">
       <div class="panel-heading">
         <h3 class="panel-title"><span class="fa fa-plus fa-fw fa-2x "></span> Add Your Ad</h3>
         
       </div>
       <div class="panel-body">
+		<div class="row">
+		<div class="col-md-8">
+			
 
-			<div class="pull-right col-md-4">
+      <form id="newAddForm" name="newAddForm" class="form-horizontal" role="form" action="">
+      <input type="hidden" id="category_id" name="category_id" value=""></input>
+
+		<div class="row">
+        <div class="form-group">
+  		<label class=" control-label col-md-3" for="mainCategory">Select Category</label>
+		  <div class="col-md-5">
+		  <select id="mainCategory" name="mainCategory" class="form-control ">
+		  <option value="">---Select Category---</option>
+		  	
+		  	@foreach ($categories as $category)
+
+		  		<optgroup value="" label="{{ $category['self']['name'] }}"> 
+
+			  	@foreach ($category['children'] as $child) 
+			  		<option value="{{ $child['id'] }}" data="{{ $child['route'] }}">{{ $child['name'] }}</option>
+			  	
+			  	@endforeach
+		  		</optgroup>
+		  	 
+			@endforeach
+
+		  </select> 
+		  </div>
+		</div>
+		</div>
+		<!--<input type="text" id="catName" name="catName">-->
+		
+		<div class="row " id="subCategoryDiv" style="display:none;">
+        <div class="form-group">
+  		<label class=" control-label col-md-3" for="subCategory">Select SubCategory</label>
+		  <div class="col-md-5">
+		  <select id="subCategory" name="subCategory" class="form-control ">
+		  <option value="">---Select SubCategory---</option>
+		  	
+		  	
+
+		  </select> 
+		  </div>
+		</div>
+		</div>
+		
+
+       		@yield('content')
+
+
+        
+		
+	
+		<br><br><br><br>
+	  </div>
+
+	  <div class="col-md-4">
 			<div class="panel panel-warning ">
 				 <div class="panel-body small">
 		      <h3><span class="fa fa-paperclip"></span> Quick rules</h3>
@@ -27,58 +82,26 @@
 				</p>
 				</div>
 				</div>
-			</div>
-
-      <form class="form-horizontal" role="form">
-
-		<div class="row">
-        <div class="form-group">
-  		<label class=" control-label col-md-2" for="prependedtext">Select Category</label>
-		  <div class="col-md-4">
-		  <select class="form-control ">
-		  <option value="">---Select Category---</option>
-		  	
-		  	@foreach ($categories as $category)
-
-		  		<optgroup value="" label="{{ $category['self']['name'] }}"> 
-
-			  	@foreach ($category['children'] as $child) 
-			  		<option value="{{ $child['id'] }}">{{ $child['name'] }}</option>
-			  	
-			  	@endforeach
-		  		</optgroup>
-		  	 
-			@endforeach
-
-		  </select> 
-		  </div>
-		</div>
-		</div>
-		
-
-       		@yield('content')
-
-
-        </form>
-		
-	
-		<br><br><br><br>
 	  </div>
-	  
+	</div>
+	</div> 	
 	  <div class="panel-footer">
 			
        	<div class="row">
 	       	<div class="form-group ">
 			  <label class="control-label col-md-2" for="submit"></label>
 			  <div class="col-md-4">
-			    <button id="submit" name="submit" class="btn btn-warning">Publish Ad</button>
+			    <input type="submit" id="submitAd" name="submitAd" class="btn btn-warning" value="Publish Ad" />
 			  </div>
 			</div>
 
        	</div>
        	</div>
+       	</form>
 		
-</div>   
+</div>  
+
+</div> 
 </div> 
 
 @stop 
