@@ -53,7 +53,7 @@
 
 
 <div id="footer">
-<p class="text-muted credit text-center"> Copyright © Gamlabs Technologies.</p>
+<p class="text-muted credit text-center"> Copyright © Gamlabs Technologies. ({{ date('Y')}})</p>
 
 
 </div>

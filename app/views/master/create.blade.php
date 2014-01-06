@@ -72,7 +72,7 @@
 		   {{ Form::radio('product_for','sale',true,['class' =>'form-control'])}}For Sale
 		   </span>
 		   <span class="radio inline">
-		   {{ Form::radio('product_for','wanted',true,['class' =>'form-control'])}}Wanted
+		   {{ Form::radio('product_for','wanted',false,['class' =>'form-control'])}}Wanted
 		   </span>
 		  </div>
 

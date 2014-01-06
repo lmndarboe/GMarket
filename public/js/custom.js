@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	 $('#grid-products').click(function(){$('#products .item').addClass('col-md-4');});
-	 $('#list-products').click(function(){$('#products .item').removeClass('col-md-4');});
+	 $('#grid-products').click(function(){$('#products .item').addClass('col-md-3');});
+	 $('#list-products').click(function(){$('#products .item').removeClass('col-md-3');});
 
 
 
@@ -16,10 +16,10 @@ $(document).ready(function(){
 			}
 		});
 	}
-
+	
 
 	$('#mainCategory').change(function(){
-		$('#subCategoryDiv').attr('required',false);
+		$('#subCategory').attr('required',false);
 		$('#subCategoryDiv').hide();
 		$('#formPartial').html(' ');
 		
@@ -32,7 +32,7 @@ $(document).ready(function(){
 			success: function(data){
 				if(data[0]){
 					$('#newAddForm').attr('action','');
-					$('#subCategoryDiv').attr('required',true);
+					$('#subCategory').attr('required',true);
 					$('#subCategoryDiv').show();
 					$('#subCategory').html('<option value="">---Select a Subcategory---</option>')
 				}else{
