@@ -34,8 +34,20 @@
 <!-- Tab panes -->
 <div class="tab-content ">
   <div class="tab-pane active" id="login">
-  <br> 
-    <form class="form-horizontal center">
+  <p>
+  
+    @if(Session::has('flashMessage'))
+      
+      <span class="fa fa-warning ">
+      <small>
+      {{ Session::get('flashMessage') }}
+      </small>
+      </span>
+     
+    @endif
+  
+   </p>
+    <form class="form-horizontal center" method="POST" action="/session">
 <fieldset>
 
 
@@ -44,11 +56,11 @@
 
 <!-- Prepended text-->
 <div class="form-group">
-  <label class=" control-label" for="prependedtext"></label>
+  <label class=" control-label" for="email"></label>
   <div class="col-md-12">
     <div class="input-group">
       <span class="input-group-addon"><span class="fa fa-envelope-o fa-2x"></span></span>
-      <input type="text" id="username" name="username" class="form-control input-lg" placeholder="Email" required="" type="text">
+      <input type="text" id="email" name="email" class="form-control input-lg" placeholder="Email" required="" type="text" value="{{ Input::old('email') }}">
     </div>
     
   </div>

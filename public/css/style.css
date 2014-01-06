@@ -1,3 +1,32 @@
+/* Radios and checkboxes on same line */
+
+.item.list-group-item
+{
+	float: none;
+	width: 100%;
+	background-color:green;
+}
+.item.list-group-item:before,
+.item.list-group-item:after {
+  display: table;
+  content: " ";
+}
+
+.item.list-group-item img{float:left;}
+.item.list-group-item:after
+{
+	clear:both;
+}
+
+.radio.inline,
+.checkbox.inline {
+  display: inline-block;
+}
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-left: 10px;
+}
+
 .three-d{
 font-family: Garamond, serif;
 line-height: 1em;

@@ -14,15 +14,21 @@
 		<div class="row">
 		<div class="col-md-8">
 			
+		<!--
+      <form id="newAddForm" name="newAddForm" class="form-horizontal" role="form" action="" method="POST" files="true">
 
-      <form id="newAddForm" name="newAddForm" class="form-horizontal" role="form" action="" method="POST">
+      -->
+
+      <form id="newAddForm" name="newAddForm" class="form-horizontal" role="form" action="" method="POST" enctype="multipart/form-data">
+
+
       <input type="hidden" id="category_id" name="category_id" value=""></input>
 
 		<div class="row">
         <div class="form-group">
   		<label class=" control-label col-md-3" for="mainCategory">Select Category</label>
 		  <div class="col-md-5">
-		  <select id="mainCategory" name="mainCategory" class="form-control ">
+		  <select id="mainCategory" name="mainCategory" class="form-control " required >
 		  <option value="">---Select a Category---</option>
 		  	
 		  	@foreach ($categories as $category)
@@ -47,7 +53,7 @@
         <div class="form-group">
   		<label class=" control-label col-md-3" for="subCategory"></label>
 		  <div class="col-md-5">
-		  <select id="subCategory" name="subCategory" class="form-control ">
+		  <select id="subCategory" name="subCategory" class="form-control " >
 		  <option value="">---Select a SubCategory---</option>
 		  	
 		  	
@@ -56,6 +62,24 @@
 		  </div>
 		</div>
 		</div>
+
+
+		<div class="row">
+        <div class="form-group">
+		  {{ Form::label('','',['class' => 'control-label col-md-3'])}}
+		  <div class="col-md-5 ">	 
+		  <span class="radio inline">
+		   {{ Form::radio('product_for','sale',true,['class' =>'form-control'])}}For Sale
+		   </span>
+		   <span class="radio inline">
+		   {{ Form::radio('product_for','wanted',true,['class' =>'form-control'])}}Wanted
+		   </span>
+		  </div>
+
+		</div>
+		</div>
+
+
 		
 			<div id="formPartial">
 
@@ -68,7 +92,7 @@
 	        <div class="form-group">
 			  {{ Form::label('title','Ad Title',['class' => 'control-label col-md-3'])}}
 			  <div class="col-md-5">	 
-			 {{ Form::text('title','',['class' => 'form-control'])}}
+			 {{ Form::text('title','',['class' => 'form-control','required'])}}
 			  </div>
 
 			</div>
@@ -79,7 +103,7 @@
 	        <div class="form-group">
 			  {{ Form::label('description','Description',['class' => 'control-label col-md-3'])}}
 			  <div class="col-md-6">	 
-			 {{ Form::textarea('description','',['class' => 'form-control'])}}
+			 {{ Form::textarea('description','',['class' => 'form-control','required'])}}
 			  </div>
 
 			</div>
@@ -87,11 +111,11 @@
 
 		 <div class="row">
 	        <div class="form-group">
-			  {{ Form::label('price','Price',['class' => 'control-label col-md-3'])}}
+			  {{ Form::label('price','Price',['class' => 'control-label col-md-3','required'])}}
 			  <div class="col-md-3">
 			  <div class="input-group">
 			  <span class="input-group-addon ">GMD</span>
-			 {{ Form::text('price','',['class' => 'form-control'])}}
+			 {{ Form::text('price','',['class' => 'form-control','required'])}}
 			  </div>
 			  </div>
 
@@ -101,7 +125,7 @@
 
 		<div class="row">
 	        <div class="form-group">
-			  {{ Form::label('image_path','Upload Image',['class' => 'control-label col-md-3'])}}
+			  {{ Form::label('image_path','Upload Image',['class' => 'control-label col-md-3','required'])}}
 			  <div class="col-md-5">	 
 			 {{ Form::file('image_path')}}
 			  </div>

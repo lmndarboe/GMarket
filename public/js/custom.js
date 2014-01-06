@@ -1,4 +1,8 @@
 $(document).ready(function(){
+	 $('#grid-products').click(function(){$('#products .item').addClass('col-md-4');});
+	 $('#list-products').click(function(){$('#products .item').removeClass('col-md-4');});
+
+
 
 	function sendAjax(id){
 
@@ -15,6 +19,7 @@ $(document).ready(function(){
 
 
 	$('#mainCategory').change(function(){
+		$('#subCategoryDiv').attr('required',false);
 		$('#subCategoryDiv').hide();
 		$('#formPartial').html(' ');
 		
@@ -27,6 +32,7 @@ $(document).ready(function(){
 			success: function(data){
 				if(data[0]){
 					$('#newAddForm').attr('action','');
+					$('#subCategoryDiv').attr('required',true);
 					$('#subCategoryDiv').show();
 					$('#subCategory').html('<option value="">---Select a Subcategory---</option>')
 				}else{
@@ -66,6 +72,7 @@ $(document).ready(function(){
 		});
 	});
 
+	$("#newAddForm").validate();
 
 	/*
 	$('#submit').click(function(){

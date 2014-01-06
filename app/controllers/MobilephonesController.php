@@ -29,8 +29,31 @@ class MobilephonesController extends BaseController {
 	 */
 	public function store()
 	{
-		//
-		return "store in db";
+		$image_path = "";
+		if(Input::hasFile('image_path')){
+			$file = Input::file('image_path');
+			$filename = str_random(20).'.'.$file->getClientOriginalExtension();//;$file->getClientOriginalName();
+			$destinationPath = 'uploads/';
+			$image_path = $destinationPath.$filename;
+			$uploadSuccess = $file->move($destinationPath, $filename);
+		}
+		
+
+		$mobilephone  = new Mobilephone;
+		$mobilephone->category_id = Input::get('category_id');
+		$mobilephone->poster_id = Auth::user()->id;
+		$mobilephone->product_for = Input::get('product_for');
+		$mobilephone->is_replica = Input::get('is_replica');
+		$mobilephone->is_touch = Input::get('is_touch');
+		$mobilephone->title = Input::get('title');
+		$mobilephone->description = Input::get('description');
+		$mobilephone->price = Input::get('price');
+		$mobilephone->image_path = $image_path; 
+		$mobilephone->brand = Input::get('brand');
+
+		$mobilephone->save();
+
+		return Redirect::to('/');
 	}
 
 	/**
@@ -75,6 +98,7 @@ class MobilephonesController extends BaseController {
 	public function destroy($id)
 	{
 		//
+		return "Deleting Mobile Phones";
 	}
 
 }
