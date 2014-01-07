@@ -41,7 +41,7 @@
 
 		
 		
-		<a href="#">
+		<a href="/{{ $product->category->route."/".$product->id}}">
 		  <div class="col-sm-6 col-md-3">
 		    <div class="thumbnail">
 		      <img  class="pull-left img-thumbnail " src="/{{ $product->image_path }}">

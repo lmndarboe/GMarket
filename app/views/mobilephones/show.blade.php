@@ -2,7 +2,7 @@
 
 @section('content')
 {{ $edit_url = "";$delete_url = ""}}
-	<div class="">
+	<div class="container-fluid">
 		<div class="row">
 		<h2 class="lead">&nbsp;&nbsp;{{ $product->title}}</h2>
 			<div class="col-md-6">

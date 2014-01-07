@@ -83,10 +83,12 @@ class MobilephonesController extends BaseController {
 		
 
 		$substr = "title LIKE ".implode(' AND title LIKE ', preg_split("/[\s,]+/",preg_replace("/(\w+)/","'%$1%'",$product->title)));
-		//return $substr;
-		$related_products = DB::table(DB::raw('products'))->select(DB::raw("*"))->whereRaw(DB::raw($substr))->get();
-		
-		
+		//$related_products = DB::table(DB::raw('products'))->select(DB::raw("*"))->whereRaw(DB::raw($substr))->get();
+		$substr = preg_split("/[\s,]+/",preg_replace("/(\w+)/","%$1%",$product->title));
+		foreach ($substr as $key) {
+			$related_products = Product::where('title','like',$key);
+		}
+		$related_products = Product::where('title','like',$key)->get();
 		 
         return View::make('mobilephones.show')->with(compact('product'))->with('related_products',$related_products);
 	}

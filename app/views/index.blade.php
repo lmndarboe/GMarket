@@ -7,7 +7,7 @@
 <div class="row">
 		
 		<section id="main-search-bar" class="col-md-12">
-			<div class="container-fluid">
+			<div class="container">
 			<div class="row">
 				<div class="navbar navbar-inverse" role="navigation">
 					<div class="navbar-header">
