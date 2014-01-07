@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	 $('#grid-products').click(function(){$('#products .item').addClass('col-md-3');});
-	 $('#list-products').click(function(){$('#products .item').removeClass('col-md-3');});
+	 $('#grid-products').click(function(){$('#products .item').addClass('col-md-2');});
+	 $('#list-products').click(function(){$('#products .item').removeClass('col-md-2');});
 
 
 

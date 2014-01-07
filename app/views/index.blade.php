@@ -2,12 +2,10 @@
 
 @section('mainContent')
 
-
-
 <div class="row">
 		
 		<section id="main-search-bar" class="col-md-12">
-			<div class="container">
+			<div class="container-fluid">
 			<div class="row">
 				<div class="navbar navbar-inverse" role="navigation">
 					<div class="navbar-header">
@@ -81,9 +79,9 @@
 				<div id="products" style="background-color:#f5f5f5;">
 					<div class="item thumbnail  col-md-12" style="padding-right:20px;">
 					
-					  <img height="110" width="120"  class="pull-left img-thumbnail " src="{{ $product->image_path }}">
+					  <img height="90" width="120"  class="pull-left img-thumbnail " src="{{ $product->image_path }}">
 					
-					<caption style="padding-left:30px;">
+					<caption class="text-center" style="padding-left:30px;">
 					  <h4 >{{ $product->title . " - (". $product->category->name.")"}}</h4>
 					  <span class="pull-right">{{"GMD ".$product->price}}</span>
 					  <p >
@@ -95,38 +93,13 @@
 				</div>
 			</a>
 			@endforeach
-			<!--
-			<a href="#">
-				<div id="products" >
-					<div class="item col-md-12 thumbnail ">
-					
-					  <img class="pull-left img-thumbnail " src="http://dummyimage.com/300x150/000/fff&amp;text=logo">
-					
-					<div class="caption">
-					  <h4 >List group item heading 1</h4>
-					  <p>
-					  	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					  	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					  	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					  	consequat. icia deserunt mollit anim id est laborum.
-					  </p>
-					  </div>
-
-				 	 </div>
+		
 				</div>
-			</a>
-			-->
-				</div>
-
-		     
-		    
+	    
 		  </div>
 		  </div>
 		</section>
 		
 </div>
-
-
-
 
 @stop

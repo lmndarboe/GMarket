@@ -80,16 +80,12 @@ class MobilephonesController extends BaseController {
 	{
 
 		$product = Product::with('category')->find($id);
-		
-
 		$substr = "title LIKE ".implode(' AND title LIKE ', preg_split("/[\s,]+/",preg_replace("/(\w+)/","'%$1%'",$product->title)));
-		//$related_products = DB::table(DB::raw('products'))->select(DB::raw("*"))->whereRaw(DB::raw($substr))->get();
 		$substr = preg_split("/[\s,]+/",preg_replace("/(\w+)/","%$1%",$product->title));
 		foreach ($substr as $key) {
 			$related_products = Product::where('title','like',$key);
 		}
 		$related_products = Product::where('title','like',$key)->get();
-		 
         return View::make('mobilephones.show')->with(compact('product'))->with('related_products',$related_products);
 	}
 
@@ -113,7 +109,7 @@ class MobilephonesController extends BaseController {
 	 */
 	public function update($id)
 	{
-		$product = Mobilephone::find($id);
+		$product = Product::find($id);
 		$image_path = $product->image_path;
 		if(Input::hasFile('image_path')){
 			$file = Input::file('image_path');
@@ -125,11 +121,11 @@ class MobilephonesController extends BaseController {
 		Input::merge(['image_path' => $image_path]);
 		$input = Input::all();
 		$input['image_path'] = $image_path;
-		$product = Mobilephone::find($id);
+		$product = Product::find($id);
 		if($product->update($input)){
-			//Redirect::to($product->category->route."/".$product->id);
-			return Redirect::to('/');
-			//return Input::all();
+			
+			return Redirect::to('/')->with('message','Successfully Edited');
+			
 		}
 
 	}
@@ -147,7 +143,7 @@ class MobilephonesController extends BaseController {
 		if($product){
 			$product->delete();
 		}
-		return "Successfully Deleted";
+		return Redirect::to('/')->with('message','Successfully Deleted');
 	}
 
 }

@@ -1,15 +1,27 @@
 @extends('layout.view')
 
 @section('content')
-{{ $edit_url = "";$delete_url = ""}}
+
 	<div class="container-fluid">
 		<div class="row">
+		<!-- Product Title -->
 		<h2 class="lead">&nbsp;&nbsp;{{ $product->title}}</h2>
-			<div class="col-md-6">
-				<img src="/{{$product->image_path}}" alt="" class="col-md-12 thumbnail"><br>
-				<p class="col-md-12 bs-callout bs-callout-info">{{ $product->description}}</p>
+		<!-- End Product Title -->
 
-			</div>	
+		
+			<div class="col-md-6">
+				<!-- Product Image -->
+				<img src="/{{$product->image_path}}" alt="" class="col-md-12 thumbnail"><br>
+				 <!-- End Product Image -->
+
+				<!-- Product Description -->
+				<p class="col-md-12 bs-callout bs-callout-info">{{ $product->description}}</p>
+					<!-- End Product Description -->
+
+			</div>
+			
+
+			<!-- Product Detail -->
 			<div class="col-md-6 bs-callout bs-callout-warning lead">
 			
 				<dl class="dl-horizontal">
@@ -22,17 +34,13 @@
 				  
 				</dl>
 
-				
-
 			</div>
-		
 
+			<!-- End Product Deatil -->
+
+		
+		
 		</div>
 
 	</div>
-@stop
-
-@section('related-content')
-	
-
 @stop

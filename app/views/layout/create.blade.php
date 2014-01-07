@@ -66,14 +66,15 @@
 
 		<div class="row">
         <div class="form-group">
-		  {{ Form::label('','',['class' => 'control-label col-md-3'])}}
-		  <div class="col-md-5 ">	 
-		  <span class="radio inline">
-		   {{ Form::radio('product_for','sale',true,['class' =>'form-control'])}}For Sale
-		   </span>
-		   <span class="radio inline">
-		   {{ Form::radio('product_for','wanted',false,['class' =>'form-control'])}}Wanted
-		   </span>
+		  {{ Form::label('product_for','For/Or',['class' => 'control-label col-md-3'])}}
+		  <div class="col-md-2">	 
+		 		{{ Form::select('product_for',
+		 	[
+		 	"" => "---Select One---",
+		 	"sale" => "Sale",
+			"wanted" => "Wanted",
+			],'For',['class' =>'form-control','required'])
+			}}
 		  </div>
 
 		</div>
@@ -126,8 +127,11 @@
 		<div class="row">
 	        <div class="form-group">
 			  {{ Form::label('image_path','Upload Image',['class' => 'control-label col-md-3','required'])}}
-			  <div class="col-md-5">	 
+			  <div class="col-md-5">
+			  <span class="btn btn-info btn-file">Browse	 
 			 {{ Form::file('image_path')}}
+
+			 </span>
 			  </div>
 
 			</div>

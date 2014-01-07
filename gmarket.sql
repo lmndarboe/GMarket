@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 07, 2014 at 05:44 AM
+-- Generation Time: Jan 07, 2014 at 07:24 PM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.6-1ubuntu1.5
 
@@ -56,11 +56,11 @@ INSERT INTO `categories` (`id`, `name`, `parent_id`, `route`, `created_at`, `upd
 (12, 'Mobile Phones', 1, 'mobile-phones', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (13, 'Computers & Accessories', 1, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (14, 'TV & Video', 1, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(15, 'Video Games & Consoles', 1, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(15, 'Video Games & Consoles', 1, 'video-games-consoles', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (16, 'Audio & MP3', 1, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(17, 'Mobile Phone Accessories', 1, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(17, 'Mobile Phone Accessories', 1, 'mobile-phone-accessories', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (18, 'Cameras & Camcorders', 1, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(19, 'Other Electronics', 1, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(19, 'Other Electronics', 1, 'other-electronics', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (20, 'Cars', 2, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (21, 'Truck, Bus & Heavy-Duty', 2, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (22, 'Parts & Accessories', 2, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -106,21 +106,21 @@ INSERT INTO `categories` (`id`, `name`, `parent_id`, `route`, `created_at`, `upd
 (62, 'Meat', 10, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (63, 'Vegetables', 10, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (64, 'Fruits', 10, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(65, 'Laptops & Netbooks', 13, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(66, 'Computer Accessories', 13, 'default-route', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(67, 'Tablet Devices', 13, 'default-route', '2014-01-04 23:10:57', '2014-01-04 23:10:57'),
-(68, 'Desktop Computers', 13, 'default-route', '2014-01-04 23:11:20', '2014-01-04 23:11:20'),
-(69, 'TVs', 14, 'default-route', '2014-01-04 23:12:08', '2014-01-04 23:12:08'),
-(70, 'TV & Video Accessories', 14, 'default-route', '2014-01-04 23:12:19', '2014-01-04 23:12:19'),
-(71, 'Projectors', 14, 'default-route', '2014-01-04 23:12:29', '2014-01-04 23:12:29'),
-(72, 'Video Players', 14, 'default-route', '2014-01-04 23:12:39', '2014-01-04 23:12:39'),
-(73, 'Speakers & Sound Systems', 16, 'default-route', '2014-01-04 23:13:51', '2014-01-04 23:13:51'),
-(74, 'iPod & MP3 Players', 16, 'default-route', '2014-01-04 23:14:22', '2014-01-04 23:14:22'),
-(75, 'Other Audio & MP3', 16, 'default-route', '2014-01-04 23:14:33', '2014-01-04 23:14:33'),
-(76, 'Photo Cameras', 18, 'default-route', '2014-01-04 23:15:10', '2014-01-04 23:15:10'),
-(77, 'Video Camcorders', 18, 'default-route', '2014-01-04 23:15:59', '2014-01-04 23:15:59'),
-(78, 'Other Cameras', 18, 'default-route', '2014-01-04 23:16:12', '2014-01-04 23:16:12'),
-(79, 'Photo & Video Accessories', 18, 'default-route', '2014-01-04 23:16:46', '2014-01-04 23:16:46'),
+(65, 'Laptops & Netbooks', 13, 'laptops-netbooks', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(66, 'Computer Accessories', 13, 'computer-accessories', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(67, 'Tablet Devices', 13, 'tablet-devices', '2014-01-04 23:10:57', '2014-01-04 23:10:57'),
+(68, 'Desktop Computers', 13, 'desktop-computers', '2014-01-04 23:11:20', '2014-01-04 23:11:20'),
+(69, 'TVs', 14, 'tvs', '2014-01-04 23:12:08', '2014-01-04 23:12:08'),
+(70, 'TV & Video Accessories', 14, 'tv-video-accessories', '2014-01-04 23:12:19', '2014-01-04 23:12:19'),
+(71, 'Projectors', 14, 'projectors', '2014-01-04 23:12:29', '2014-01-04 23:12:29'),
+(72, 'Video Players', 14, 'video-players', '2014-01-04 23:12:39', '2014-01-04 23:12:39'),
+(73, 'Speakers & Sound Systems', 16, 'speakers-sound-systems', '2014-01-04 23:13:51', '2014-01-04 23:13:51'),
+(74, 'iPod & MP3 Players', 16, 'ipod-mp3-players', '2014-01-04 23:14:22', '2014-01-04 23:14:22'),
+(75, 'Other Audio & MP3', 16, 'other-audio-mp3', '2014-01-04 23:14:33', '2014-01-04 23:14:33'),
+(76, 'Photo Cameras', 18, 'photo-cameras', '2014-01-04 23:15:10', '2014-01-04 23:15:10'),
+(77, 'Video Camcorders', 18, 'video-camcorders', '2014-01-04 23:15:59', '2014-01-04 23:15:59'),
+(78, 'Other Cameras', 18, 'other-cameras', '2014-01-04 23:16:12', '2014-01-04 23:16:12'),
+(79, 'Photo & Video Accessories', 18, 'photo-video-accessories', '2014-01-04 23:16:46', '2014-01-04 23:16:46'),
 (80, 'Trucks & Vans', 21, 'default-route', '2014-01-04 23:18:04', '2014-01-04 23:18:04'),
 (81, 'Buses & Taxis', 21, 'default-route', '2014-01-04 23:18:18', '2014-01-04 23:18:18'),
 (82, 'Tractors & Heavy-Duty', 21, 'default-route', '2014-01-04 23:18:35', '2014-01-04 23:18:35'),
@@ -331,7 +331,8 @@ INSERT INTO `migrations` (`migration`, `batch`) VALUES
 ('2014_01_04_155948_products', 2),
 ('2014_01_04_160429_create_images_table', 3),
 ('2014_01_05_021245_update_products_table', 4),
-('2014_01_05_091842_add_for_features_fileds_products_table', 5);
+('2014_01_05_091842_add_for_features_fileds_products_table', 5),
+('2014_01_07_144729_edit_products_table', 6);
 
 -- --------------------------------------------------------
 
@@ -391,22 +392,25 @@ CREATE TABLE IF NOT EXISTS `products` (
   `logo_path` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `sold` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `products_category_id_foreign` (`category_id`),
   KEY `products_poster_id_foreign` (`poster_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=19 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=23 ;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `category_id`, `title`, `poster_id`, `product_for`, `is_replica`, `is_touch`, `description`, `price`, `image_path`, `brand`, `model`, `year`, `body_type`, `transmission`, `fuel_type`, `mileage`, `engine_capacity`, `street_landmark`, `size`, `no_bedrooms`, `no_bathrooms`, `land_type`, `features`, `company_website`, `apply_via`, `job_title`, `job_description`, `logo_path`, `created_at`, `updated_at`) VALUES
-(12, 12, 'Apple 3GS', 2, 'sale', 'replica', 'touch', 'Its a very good phone with nice features and its slight ly used....', 4000.00, 'uploads/aidnL3zY3NU2seGbuRgp.jpg', 'apple', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-06 21:36:28', '2014-01-07 04:53:42'),
-(13, 12, 'Iphone 3GS', 2, 'sale', NULL, 'touch', 'Its also a very good phone', 7643.00, 'uploads/GuTuS9zEl0oNDxlS3gV4.jpg', 'apple', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-06 21:40:21', '2014-01-06 21:40:21'),
-(15, 12, 'Human Mobile Phone With Good Reception', 2, 'sale', 'replica', 'touch', 'The best ever phone', 20.00, 'uploads/H1kiP2XMgQpi8AQzOSUD.jpg', 'huawei', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-06 22:00:12', '2014-01-07 04:54:13'),
-(16, 12, 'BlackBerry 900 Series', 2, 'sale', 'replica', 'touch', 'What a Wonderful Phone.What a Wonderful Phone..What a Wonderful Phone.\r\nWhat a Wonderful Phone.\r\nWhat a Wonderful Phone.', 66777.00, 'uploads/IK97wrvjaeSFC4jNBVH4.jpg', 'blackberry', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-07 00:59:38', '2014-01-07 00:59:38'),
-(17, 12, 'Apple 3GS', 2, 'sale', NULL, 'touch', 'this is good', 8787.00, 'uploads/rsgnJZtPI9ZFFYXcVbws.jpg', 'apple', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-07 04:20:29', '2014-01-07 04:20:29'),
-(18, 12, 'Apple 3GS', 2, 'sale', 'replica', 'touch', 'klkjldkjkjlk', 999.00, 'uploads/CHH6puDXbu3Rh16tIVIe.jpg', 'apple', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-07 04:20:57', '2014-01-07 04:20:57');
+INSERT INTO `products` (`id`, `category_id`, `title`, `poster_id`, `product_for`, `is_replica`, `is_touch`, `description`, `price`, `image_path`, `brand`, `model`, `year`, `body_type`, `transmission`, `fuel_type`, `mileage`, `engine_capacity`, `street_landmark`, `size`, `no_bedrooms`, `no_bathrooms`, `land_type`, `features`, `company_website`, `apply_via`, `job_title`, `job_description`, `logo_path`, `created_at`, `updated_at`, `sold`) VALUES
+(12, 12, 'Apple 3GS', 2, 'sale', 'replica', 'touch', 'Its a very good phone with nice features and its slight ly used.........', 4000.00, 'uploads/aidnL3zY3NU2seGbuRgp.jpg', 'acer', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-06 21:36:28', '2014-01-07 16:05:27', NULL),
+(13, 12, 'Iphone 3GS', 2, 'product_for', NULL, 'touch', 'Its also a very good phone', 7643.00, 'uploads/GuTuS9zEl0oNDxlS3gV4.jpg', 'alcatel', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-06 21:40:21', '2014-01-07 18:56:01', NULL),
+(15, 12, 'Human Mobile Phone With Good Reception', 2, 'sale', 'replica', 'touch', 'The best ever phone', 20.00, 'uploads/H1kiP2XMgQpi8AQzOSUD.jpg', 'huawei', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-06 22:00:12', '2014-01-07 04:54:13', NULL),
+(16, 12, 'BlackBerry 900 Series', 2, 'sale', 'replica', 'touch', 'What a Wonderful Phone.What a Wonderful Phone..What a Wonderful Phone.\r\nWhat a Wonderful Phone.\r\nWhat a Wonderful Phone.', 66777.00, 'uploads/IK97wrvjaeSFC4jNBVH4.jpg', 'blackberry', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-07 00:59:38', '2014-01-07 00:59:38', NULL),
+(17, 12, 'Apple 3GS', 2, 'sale', NULL, 'touch', 'this is good ok whay', 8787.00, 'uploads/rsgnJZtPI9ZFFYXcVbws.jpg', 'alcatel', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-07 04:20:29', '2014-01-07 15:34:36', NULL),
+(18, 12, 'Apple 3GS', 2, 'sale', 'replica', 'touch', 'klkjldkjkjlk', 999.00, 'uploads/CHH6puDXbu3Rh16tIVIe.jpg', 'apple', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-07 04:20:57', '2014-01-07 04:20:57', NULL),
+(21, 12, 'Google Mobile - Brand new', 2, 'wanted', 'replica', 'touch', '\r\n    Make sure you post in the correct category.\r\n    Do not post the same ad more than once. Duplicate ads will be rejected.\r\n    Do not upload pictures with watermarks. Invalid pictures will be removed.\r\n    Do not put your email or phone numbers in the title or description.\r\n', 87987.00, 'uploads/x7UlMtb5BACsdpjWScF7.jpg', 'google-nexus', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-07 18:35:22', '2014-01-07 18:35:22', NULL),
+(22, 12, 'Lamin darboe', 2, 'sale', 'replica', 'touch', 'test', 88.00, 'uploads/N7L1hs5rPiGEzllABrUR.jpg', 'alcatel', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-07 19:21:14', '2014-01-07 19:22:47', NULL);
 
 -- --------------------------------------------------------
 
