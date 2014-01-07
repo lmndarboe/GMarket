@@ -1,4 +1,4 @@
-@extends('master.master')
+@extends('layout.master')
 
 @section('mainContent')
 
@@ -57,14 +57,7 @@
 		  	<li class=""><a class="btn" href="#">{{ $category->name}}</a> <span class="badge">{{ $category->count}}</span></li>
 		  @endforeach
 		   </ul>
-		   <!--
-		    <ul class="list-group list-unstyled">
-		    	<li class="list-group-item active">Properties  <span class="badge">9000</span></li>
-		    	<li class="list-group-item">Electronics</li>
-		    	<li class="list-group-item">Cars & Vehicles</li>
-
-		    </ul>
-		    -->
+		  
 		    
 		  </div>
 		  </div>
@@ -83,26 +76,26 @@
 		  <div class="panel-body">
 
 			<div class="row">
-			<a href="#">
-				<div id="products">
-					<div class="item thumbnail  col-md-12">
+			@foreach($products as $product)
+			<a href="{{ $product->category->route.'/'.$product->id}}">
+				<div id="products" style="background-color:#f5f5f5;">
+					<div class="item thumbnail  col-md-12" style="padding-right:20px;">
 					
-					  <img class="pull-left img-thumbnail " src="http://dummyimage.com/300x150/000/fff&amp;text=logo">
+					  <img height="110" width="120"  class="pull-left img-thumbnail " src="{{ $product->image_path }}">
 					
-					<caption>
-					  <h4 >List group item heading 1</h4>
+					<caption style="padding-left:30px;">
+					  <h4 >{{ $product->title . " - (". $product->category->name.")"}}</h4>
+					  <span class="pull-right">{{"GMD ".$product->price}}</span>
 					  <p >
-					  	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					  	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					  	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					  	consequat. icia deserunt mollit anim id est laborum.
+					  	
 					  </p>
 					  </caption>
 
 				 	 </div>
 				</div>
 			</a>
-
+			@endforeach
+			<!--
 			<a href="#">
 				<div id="products" >
 					<div class="item col-md-12 thumbnail ">
@@ -122,6 +115,7 @@
 				 	 </div>
 				</div>
 			</a>
+			-->
 				</div>
 
 		     

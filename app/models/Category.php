@@ -6,5 +6,9 @@ class Category extends Eloquent {
 	public static $rules = array();
 	public  $table = "categories";
 
+	public function products(){
+		return $this->hasMany('Product');
+	}
+
 	
 }

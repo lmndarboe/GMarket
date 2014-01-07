@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 06, 2014 at 04:11 PM
+-- Generation Time: Jan 07, 2014 at 05:44 AM
 -- Server version: 5.5.29
 -- PHP Version: 5.4.6-1ubuntu1.5
 
@@ -394,17 +394,19 @@ CREATE TABLE IF NOT EXISTS `products` (
   PRIMARY KEY (`id`),
   KEY `products_category_id_foreign` (`category_id`),
   KEY `products_poster_id_foreign` (`poster_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=19 ;
 
 --
 -- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`id`, `category_id`, `title`, `poster_id`, `product_for`, `is_replica`, `is_touch`, `description`, `price`, `image_path`, `brand`, `model`, `year`, `body_type`, `transmission`, `fuel_type`, `mileage`, `engine_capacity`, `street_landmark`, `size`, `no_bedrooms`, `no_bathrooms`, `land_type`, `features`, `company_website`, `apply_via`, `job_title`, `job_description`, `logo_path`, `created_at`, `updated_at`) VALUES
-(8, 12, 'Alcatel 788', 2, 'sale', NULL, 'touch', 'very good', 676.00, 'uploads/rfKELHgWco/brands.txt', 'alcatel', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-05 17:41:36', '2014-01-05 17:41:36'),
-(9, 12, 'Apple 3GS', 2, 'sale', NULL, 'touch', 'Very good apple phone', 4567.00, 'uploads/OlI9C0YGYP/fax.jpg', 'apple', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-05 20:11:26', '2014-01-05 20:11:26'),
-(10, 12, 'apple me', 2, 'sale', 'replica', 'touch', 'jbkjn', 9879.00, 'uploads/Y6QEvH7eSC36QdoHOBgr.jpg', 'apple', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-05 20:27:09', '2014-01-05 20:27:09'),
-(11, 12, 'klmklk', 2, 'wanted', 'replica', NULL, 'mm.m,.m', 99.00, 'uploads/rME07SaBvMPdgXamc7nz.txt', 'apple', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-06 10:05:07', '2014-01-06 10:05:07');
+(12, 12, 'Apple 3GS', 2, 'sale', 'replica', 'touch', 'Its a very good phone with nice features and its slight ly used....', 4000.00, 'uploads/aidnL3zY3NU2seGbuRgp.jpg', 'apple', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-06 21:36:28', '2014-01-07 04:53:42'),
+(13, 12, 'Iphone 3GS', 2, 'sale', NULL, 'touch', 'Its also a very good phone', 7643.00, 'uploads/GuTuS9zEl0oNDxlS3gV4.jpg', 'apple', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-06 21:40:21', '2014-01-06 21:40:21'),
+(15, 12, 'Human Mobile Phone With Good Reception', 2, 'sale', 'replica', 'touch', 'The best ever phone', 20.00, 'uploads/H1kiP2XMgQpi8AQzOSUD.jpg', 'huawei', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-06 22:00:12', '2014-01-07 04:54:13'),
+(16, 12, 'BlackBerry 900 Series', 2, 'sale', 'replica', 'touch', 'What a Wonderful Phone.What a Wonderful Phone..What a Wonderful Phone.\r\nWhat a Wonderful Phone.\r\nWhat a Wonderful Phone.', 66777.00, 'uploads/IK97wrvjaeSFC4jNBVH4.jpg', 'blackberry', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-07 00:59:38', '2014-01-07 00:59:38'),
+(17, 12, 'Apple 3GS', 2, 'sale', NULL, 'touch', 'this is good', 8787.00, 'uploads/rsgnJZtPI9ZFFYXcVbws.jpg', 'apple', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-07 04:20:29', '2014-01-07 04:20:29'),
+(18, 12, 'Apple 3GS', 2, 'sale', 'replica', 'touch', 'klkjldkjkjlk', 999.00, 'uploads/CHH6puDXbu3Rh16tIVIe.jpg', 'apple', '', 0, '', '', '', '', '', '', 0, 0, 0, '', '', '', '', '', '', '', '2014-01-07 04:20:57', '2014-01-07 04:20:57');
 
 -- --------------------------------------------------------
 

@@ -10,7 +10,9 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
+Route::get('/default-route/create',function(){
+	return "Partial Form data";
+});
 Route::post('/ajax',function(){
 	$subCat = Category::whereParentId(Input::get('subCategory'))->orderBy('name')->get()->toArray();
 	return Response::json($subCat);
@@ -39,7 +41,7 @@ Route::group(array('before' => 'auth'), function()
 		
 		
 
-		return View::make('master.create')->with('categories',$rt);
+		return View::make('layout.create')->with('categories',$rt);
 	});
 });
 
@@ -53,24 +55,31 @@ Route::post('/session','UsersController@session');
 
 Route::get('/view',function(){
 
-	return View::make('master.view');
+	return View::make('layout.view');
 });
 Route::get('/update',function(){
 
-	return View::make('master.update');
+	return View::make('layout.update');
 });
-Route::get('/delete',function(){
+Route::get('/delete/{id}',function($id){
 
-	return View::make('master.delete');
+	$product = Product::find($id);
+	if($product->poster_id == Auth::user()->id){
+		return View::make('layout.delete')->with(compact('product'));
+	}else{
+		return "Sorry";
+	}
+	
 });
 
 Route::get('/', function()
 {
-
+	$products = Product::with('category')->get()->take(10);
 	$categories = Category::whereNull('parent_id')->get();
 	//$categories = DB::table(DB::raw('categories as p'))->select(DB::raw('id,name ,(select count(*) from categories where parent = p.id) as count'))->whereParent(0)->get();
 
-	return View::make('index')->with('categories',$categories);
+	return View::make('index')->with('categories',$categories)->with('products',$products);
 });
+
 
 Route::resource('mobile-phones', 'MobilephonesController');

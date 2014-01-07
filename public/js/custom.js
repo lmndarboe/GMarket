@@ -67,7 +67,7 @@ $(document).ready(function(){
 			//dataType: 'json',
 			//data: {subCategory:$(this).val()},
 			success: function(data){
-				alert(data);
+				$('#formPartial').html(data);
 			}
 		});
 	});
