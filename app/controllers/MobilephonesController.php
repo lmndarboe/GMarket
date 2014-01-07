@@ -109,7 +109,13 @@ class MobilephonesController extends BaseController {
 	 */
 	public function update($id)
 	{
+		
 		$product = Product::find($id);
+		if(Auth::user()->id != $product->poster_id){
+			return Redirect::to('/')->with('message','Wrong Poster');
+		}
+
+	
 		$image_path = $product->image_path;
 		if(Input::hasFile('image_path')){
 			$file = Input::file('image_path');

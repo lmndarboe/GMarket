@@ -82,7 +82,8 @@
 					  <img height="90" width="120"  class="pull-left img-thumbnail " src="{{ $product->image_path }}">
 					
 					<caption class="text-center" style="padding-left:30px;">
-					  <h4 >{{ $product->title . " - (". $product->category->name.")"}}</h4>
+					  <h4 > &nbsp;&nbsp;{{ $product->title . " - (". $product->category->name.")"}}</h4>
+					  &nbsp;<span class="badge">{{ Utility::ago($product->created_at)}}</span>
 					  <span class="pull-right">{{"GMD ".$product->price}}</span>
 					  <p >
 					  	

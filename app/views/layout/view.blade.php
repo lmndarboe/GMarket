@@ -14,7 +14,7 @@
 		
 	  </div>
 	  <!-- End Panel Body -->
-		@if(Auth::check())
+		@if(Auth::check() && ($product->poster_id == Auth::user()->id))
 
 		<!-- Panel Footer -->
 	   <div class="panel-footer">

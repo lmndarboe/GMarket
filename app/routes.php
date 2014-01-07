@@ -74,7 +74,7 @@ Route::get('/delete/{id}',function($id){
 
 Route::get('/', function()
 {
-	$products = Product::with('category')->get()->take(10);
+	$products = Product::with('category')->orderBy('created_at','DESC')->get()->take(10);
 	$categories = Category::whereNull('parent_id')->get();
 	//$categories = DB::table(DB::raw('categories as p'))->select(DB::raw('id,name ,(select count(*) from categories where parent = p.id) as count'))->whereParent(0)->get();
 
